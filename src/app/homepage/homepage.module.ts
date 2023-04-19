@@ -9,10 +9,7 @@ import { ContentComponent } from './content/content.component';
 
 @NgModule({
   declarations: [
-    HeaderComponent,
-    FooterComponent,
-    SideNavbarLeftComponent,
-    ContentComponent
+    
   ],
   imports: [
     CommonModule
