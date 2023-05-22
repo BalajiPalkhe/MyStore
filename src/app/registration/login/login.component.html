@@ -12,6 +12,7 @@
             Password: <br>
             <input type="text" #pass><br>
             <button (click)="log(mail.value,pass.value)">Login</button>
+            <h6 style="color: red;" *ngIf="test==2">Please enter valid username and password.</h6>
 
         </div>
 

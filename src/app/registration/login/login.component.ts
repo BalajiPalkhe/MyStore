@@ -11,13 +11,6 @@ import { LoginService } from 'src/app/login.service';
 })
 export class LoginComponent {
 
-
- 
-
-
-  
-  
-  
   constructor(public serv:LoginService,private regisered:RegisteredUserService, private appCom:AppComponent ){
     
     
@@ -39,6 +32,12 @@ export class LoginComponent {
           this.serv.editProfileval=true;
           this.serv.firstName=temp.firstName;
           this.serv.lastname=temp.lastName;
+          this.serv.matchedUserIndex=i;
+          this.appCom.viewProfile=1;
+        }
+        else
+        {
+          this.test=2;
         }
      }
 

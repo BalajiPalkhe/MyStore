@@ -11,14 +11,14 @@
             <div class="form-row">
               <div class="col-md-4 mb-3">
                 <label for="validationCustom01">First name</label>
-                <input type="text" id="validationCustom01" placeholder="First name" [(ngModel)]="firstname" #f  required>
+                <input type="text" id="validationCustom01" placeholder="First name" [(ngModel)]="usrObj.firstName" #f  required>
                 <div class="valid-feedback">
                   Looks good!
                 </div>
               </div>
               <div class="col-md-4 mb-3">
                 <label for="validationCustom02">Last name</label>
-                <input type="text"  id="validationCustom02" placeholder="Last name" [(ngModel)]="lastname" #l  required>
+                <input type="text"  id="validationCustom02" placeholder="Last name" [(ngModel)]="usrObj.lastName" #l  required>
                 <div class="valid-feedback">
                   Looks good!
                 </div>
@@ -29,7 +29,7 @@
                   <div class="input-group-prepend" >
                     <span class="input-group-text" id="inputGroupPrepend">@</span>
                   </div>
-                  <input type="text" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" #u [(ngModel)]="username"  required>
+                  <input type="text" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" #u [(ngModel)]="usrObj.userName"  required>
                   <div class="invalid-feedback">
                     Please choose a username.
                   </div>
@@ -39,21 +39,21 @@
             <div class="form-row">
               <div class="col-md-6 mb-3">
                 <label for="validationCustom03">Password</label>
-                <input type="text"  id="validationCustom03" placeholder="City" [(ngModel)]="password" #p required>
+                <input type="text"  id="validationCustom03" placeholder="Password" [(ngModel)]="usrObj.password" #p required>
                 <div class="invalid-feedback">
                   Please provide a valid city.
                 </div>
               </div>
               <div class="col-md-3 mb-3">
                 <label for="validationCustom04">State</label>
-                <input type="text"  id="validationCustom04" placeholder="State" [(ngModel)]="state" #s  required>
+                <input type="text"  id="validationCustom04" placeholder="State" [(ngModel)]="usrObj.state" #s  required>
                 <div class="invalid-feedback">
                   Please provide a valid state.
                 </div>
               </div>
               <div class="col-md-3 mb-3">
                 <label for="validationCustom05">Zip</label>
-                <input type="text"  id="validationCustom05" placeholder="Zip" [(ngModel)]="zip" #z required>
+                <input type="text"  id="validationCustom05" placeholder="Zip" [(ngModel)]="usrObj.zipcode" #z required>
                 <div class="invalid-feedback">
                   Please provide a valid zip.
                 </div>
@@ -71,6 +71,7 @@
               </div>
             </div>
             <button class="btn btn-primary" type="submit" (click)="submit(f.value,l.value,u.value,p.value,s.value,z.value)">Submit form</button>
+            <button (click)="sub()">Sub</button>
           </form>
 
 
