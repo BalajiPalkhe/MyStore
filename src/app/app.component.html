@@ -1,7 +1,8 @@
-<h1>hello</h1>
 
-<app-content></app-content>
-<app-footer>
-
-</app-footer>
 <app-header></app-header>
+
+<app-user-reg *ngIf="userReg==1"></app-user-reg>
+
+<app-login *ngIf="userReg==2"></app-login>
+
+<app-content *ngIf="userReg==3 || userReg==0"></app-content>

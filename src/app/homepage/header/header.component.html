@@ -1,1 +1,44 @@
-<p>header works!</p>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">MyStore</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Orders</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Cart</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              My Profile
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">View Profile</a></li>
+              <li *ngIf="serv.editProfileval"><a class="dropdown-item" href="#">Edit Profile</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#" *ngIf="serv.logoutVal==true">Log In</a></li>
+              <li><a class="dropdown-item" href="#"*ngIf="serv.logoutVal==false">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          
+          
+          <button type="button" class="btn btn-light" (click)="createAccount(1)" *ngIf="serv.whatToShow==true" class="btn-header">Create Account</button>
+          <button type="button" class="btn btn-light" (click)="createAccount(2)" *ngIf="serv.whatToShow==true" Class="btn-header2">LogIn</button>
+          <p style="width: 100%; margin-top: 11px;" *ngIf="app.userReg==3">Welcome, {{serv.firstName}} {{serv.lastname}}</p>
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>

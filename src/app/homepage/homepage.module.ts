@@ -9,6 +9,10 @@ import { ContentComponent } from './content/content.component';
 
 @NgModule({
   declarations: [
+    ContentComponent,
+    HeaderComponent,
+    FooterComponent,
+    SideNavbarLeftComponent
     
   ],
   imports: [
@@ -16,6 +20,10 @@ import { ContentComponent } from './content/content.component';
   ],
   exports:[
 
+    ContentComponent,
+    HeaderComponent,
+    FooterComponent,
+    SideNavbarLeftComponent
 
   ]
 })

@@ -3,8 +3,10 @@ import { CommonModule } from '@angular/common';
 import { UserRegComponent } from './user-reg/user-reg.component';
 import { ShopRegComponent } from './shop-reg/shop-reg.component';
 import { LoginComponent } from './login/login.component';
-import { ChangePasswordComponent } from './Login/change-password/change-password.component';
-import { ForgetPasswordComponent } from './Login/forget-password/forget-password.component';
+import { ChangePasswordComponent } from './login/change-password/change-password.component';
+import { ForgetPasswordComponent } from './login/forget-password/forget-password.component';
+import { FormsModule } from '@angular/forms';
+
 
 
 
@@ -14,10 +16,21 @@ import { ForgetPasswordComponent } from './Login/forget-password/forget-password
     ShopRegComponent,
     LoginComponent,
     ChangePasswordComponent,
-    ForgetPasswordComponent
+    ForgetPasswordComponent,
+
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
+  ],
+  exports:[
+
+    UserRegComponent,
+    ShopRegComponent,
+    LoginComponent,
+    ForgetPasswordComponent,
+    ChangePasswordComponent
+
   ]
 })
 export class RegistrationModule { }
