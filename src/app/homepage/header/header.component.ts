@@ -9,25 +9,27 @@ import { LoginComponent } from 'src/app/registration/login/login.component';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-
-
   t=0;
-
-  
-
   constructor(public app:AppComponent,public serv:LoginService){
 
   }
-
-
-
-
-
   createAccount(val:any){
-
     this.app.userReg=val;
-    
-
   }
+  
+  logoutVal()
+  {
+    this.serv.whatToShow=true;
+    this.app.userReg=0;
+    this.serv.logoutVal=true;
+    this.serv.editProfileval=false;
+    this.app.userReg=0;
+    this.app.viewProfile=0;
+  }
+  logInNavbar()
+  {
+    this.app.userReg=2;
+  }
+  
 
 }

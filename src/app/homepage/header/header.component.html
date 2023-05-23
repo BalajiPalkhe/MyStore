@@ -22,19 +22,19 @@
               My Profile
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">View Profile</a></li>
+              <li><a class="dropdown-item" (click)="createAccount(4)">View Profile</a></li>
               <li *ngIf="serv.editProfileval"><a class="dropdown-item" href="#">Edit Profile</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#" *ngIf="serv.logoutVal==true">Log In</a></li>
-              <li><a class="dropdown-item" href="#"*ngIf="serv.logoutVal==false">Logout</a></li>
+              <li><a class="dropdown-item" href="#" *ngIf="serv.logoutVal==true"(click)="logInNavbar()">Log In</a></li>
+              <li><a class="dropdown-item" href="#"*ngIf="serv.logoutVal==false" (click)="logoutVal()">Logout</a></li>
             </ul>
           </li>
         </ul>
         <form class="d-flex" role="search">
           
           
-          <button type="button" class="btn btn-light" (click)="createAccount(1)" *ngIf="serv.whatToShow==true" class="btn-header">Create Account</button>
-          <button type="button" class="btn btn-light" (click)="createAccount(2)" *ngIf="serv.whatToShow==true" Class="btn-header2">LogIn</button>
+          <button type="button" class="btn btn-light" (click)="createAccount(1)" *ngIf="serv.whatToShow" class="btn-header">Create Account</button>
+          <button type="button" class="btn btn-light" (click)="createAccount(2)" *ngIf="serv.whatToShow" Class="btn-header2">LogIn</button>
           <p style="width: 100%; margin-top: 11px;" *ngIf="app.userReg==3">Welcome, {{serv.firstName}} {{serv.lastname}}</p>
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>

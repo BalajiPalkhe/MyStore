@@ -32,4 +32,13 @@ export class UserRegComponent {
     usrObj=new UserInfo();
   }
 
+  usrObj:UserInfo=new UserInfo();
+  sub(){
+
+    // this.registerArr.setData(this.usrObj);
+    
+    this.usrObj=new UserInfo();
+
+  }
+
 }

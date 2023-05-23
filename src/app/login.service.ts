@@ -12,4 +12,6 @@ export class LoginService {
   editProfileval=false;
   firstName:any;
   lastname:any;
+
+  matchedUserIndex:any;
 }

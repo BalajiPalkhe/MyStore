@@ -9,6 +9,7 @@ import { HeaderComponent } from './homepage/header/header.component';
 import { SideNavbarLeftComponent } from './homepage/side-navbar-left/side-navbar-left.component';
 import { HomepageModule } from './homepage/homepage.module';
 import { RegistrationModule } from './registration/registration.module';
+import { ProfileModule } from './profile/profile.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { RegistrationModule } from './registration/registration.module';
     BrowserModule,
     AppRoutingModule,
     HomepageModule,
-    RegistrationModule
+    RegistrationModule,
+    ProfileModule
   ],
   providers: [],
   bootstrap: [AppComponent]

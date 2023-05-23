@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'MyStore';
   userReg=0;
+  viewProfile=0;
 }
