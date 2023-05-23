@@ -1,0 +1,43 @@
+<div *ngIf="app.userReg == 4 && app.viewProfile == 0">
+    <h4>Please Registed...!</h4>
+    <button (click)="createAcc()">Create Account</button>
+  </div>
+  
+  <div *ngIf="app.userReg == 4 && app.viewProfile == 1">
+    <div>
+      <div style="text-align: center;">
+        <div>
+          <div>
+            First_Name :
+            <span >{{ reg.regUser[userCom.matchedUserIndex].firstName }}</span
+            ><br />
+          </div>
+          <br />
+          <div>
+            Last_Name :
+            <span>{{ reg.regUser[userCom.matchedUserIndex].lastName }}</span
+            ><br />
+          </div>
+          <br />
+          <div>
+            User_Name :
+            <span>{{ reg.regUser[userCom.matchedUserIndex].userName }}</span
+            ><br />
+          </div>
+          <br />
+         
+          <div>
+            State : <span>{{ reg.regUser[userCom.matchedUserIndex].state }} </span
+            ><br />
+          </div>
+          <br />
+          <div>
+            Zip Code :
+            <span>{{ reg.regUser[userCom.matchedUserIndex].zipcode }}</span
+            ><br />
+          </div>
+          <br />
+        </div>
+      </div>
+    </div>
+  </div>

@@ -11,6 +11,7 @@ import { HomepageModule } from './homepage/homepage.module';
 import { RegistrationModule } from './registration/registration.module';
 import { ProfileModule } from './profile/profile.module';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +24,7 @@ import { ProfileModule } from './profile/profile.module';
     HomepageModule,
     RegistrationModule,
     ProfileModule
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
