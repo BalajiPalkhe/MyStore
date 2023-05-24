@@ -1,12 +1,15 @@
 
 <app-header></app-header>
 
-<app-user-reg *ngIf="userReg==1"></app-user-reg>
+<div class="content">
 
-<app-login *ngIf="userReg==2"></app-login>
-
-<app-content *ngIf="userReg==3 || userReg==0"></app-content>
-
-<app-view-profile *ngIf="userReg==4"></app-view-profile>
-
+    <app-user-reg *ngIf="userReg==1"></app-user-reg>
+    
+    <app-login *ngIf="userReg==2"></app-login>
+    
+    <app-content *ngIf="userReg==3 || userReg==0" ></app-content>
+    
+    <app-view-profile *ngIf="userReg==4"></app-view-profile>
+    
+</div>
 <app-footer></app-footer>

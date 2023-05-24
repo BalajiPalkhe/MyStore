@@ -1,13 +1,16 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">MyStore</a>
+      <!-- <a class="navbar-brand" href="#">MyStore</a> -->
+
+      <a ><img src="./../../../assets/fbbe466b9024f642910404ead3f5e4a5 (1).png" class="logo"   alt="logo" style="width:135px;height:42px;" (click)=" logoutVal()"></a>
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarScroll">
         <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="#" (click)="homeClick()">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Orders</a>
@@ -33,9 +36,9 @@
         <form class="d-flex" role="search">
           
           
-          <button type="button" class="btn btn-light" (click)="createAccount(1)" *ngIf="serv.whatToShow" class="btn-header">Create Account</button>
-          <button type="button" class="btn btn-light" (click)="createAccount(2)" *ngIf="serv.whatToShow" Class="btn-header2">LogIn</button>
-          <p style="width: 100%; margin-top: 11px;" *ngIf="app.userReg==3">Welcome, {{serv.firstName}} {{serv.lastname}}</p>
+          <button type="button" class="btn btn-primary" (click)="createAccount(1)" *ngIf="serv.whatToShow" class="btn-header">Create Account</button>
+          <button type="button" class="btn btn-primary" (click)="createAccount(2)" *ngIf="serv.whatToShow" Class="btn-header2 " >LogIn</button>
+          <p style="width: 100%; margin-top: 11px;" *ngIf="app.userReg==3 && app.viewProfile==1">Welcome, {{serv.firstName}} {{serv.lastname}}</p>
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>

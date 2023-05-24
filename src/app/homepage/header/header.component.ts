@@ -31,5 +31,10 @@ export class HeaderComponent {
     this.app.userReg=2;
   }
   
+ 
+  homeClick(){
+    this.app.userReg=3;
+    
+  }
 
 }
