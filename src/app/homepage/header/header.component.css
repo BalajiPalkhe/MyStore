@@ -9,3 +9,7 @@
     width: 500%;
     margin-right:500%;
 }
+
+.logo{
+    cursor:pointer;
+}
