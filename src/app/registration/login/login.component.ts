@@ -25,15 +25,26 @@ export class LoginComponent {
         let temp=UserArr[i];
         if(mail==temp.userName && pass==temp.password)
         {
-        this.test=1;
-        this.serv.whatToShow=false;
-        this.serv.logoutVal=false;
-          this.appCom.userReg=3;
-          this.serv.editProfileval=true;
-          this.serv.firstName=temp.firstName;
-          this.serv.lastname=temp.lastName;
-          this.serv.matchedUserIndex=i;
-          this.appCom.viewProfile=1;
+
+
+          if(temp.isAdmin)
+          {
+
+            this.appCom.userReg=5;
+          }
+          else{
+
+            this.test=1;
+            this.serv.whatToShow=false;
+            this.serv.logoutVal=false;
+            this.appCom.userReg=3;
+            this.serv.editProfileval=true;
+            this.serv.firstName=temp.firstName;
+            this.serv.lastname=temp.lastName;
+            this.serv.matchedUserIndex=i;
+            this.appCom.viewProfile=1;
+
+          }
         }
         else
         {

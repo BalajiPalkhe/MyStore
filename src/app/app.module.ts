@@ -10,6 +10,7 @@ import { SideNavbarLeftComponent } from './homepage/side-navbar-left/side-navbar
 import { HomepageModule } from './homepage/homepage.module';
 import { RegistrationModule } from './registration/registration.module';
 import { ProfileModule } from './profile/profile.module';
+import { AdminModule } from './admin/admin.module';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { ProfileModule } from './profile/profile.module';
     AppRoutingModule,
     HomepageModule,
     RegistrationModule,
-    ProfileModule
+    ProfileModule,
+    AdminModule
    
   ],
   providers: [],

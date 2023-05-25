@@ -12,33 +12,51 @@ export class UserRegComponent {
   constructor(public registerArr:RegisteredUserService)
   {
   }
-  firstname:any;
-  lastname:any;
-  username:any;
-  password:any;
-  state:any;
-  zip:any;
+ 
+ 
+  usrObj:UserInfo=new UserInfo();
 
-  submit(f:any,l:any,u:any,p:any,s:any,z:any){
-    let usrObj:UserInfo=new UserInfo();
-    usrObj.firstName=f;
-    usrObj.lastName=l;
-    usrObj.userName=u;
-    usrObj.password=p;
-    usrObj.state=s;
-    usrObj.zipcode=z;
-    this.registerArr.setData(usrObj);
-    console.log(this.registerArr.getData());
-    usrObj=new UserInfo();
+  udisable=false;
+
+  sdisable=false;
+  customer(){
+
+    this.usrObj.isAdmin=false;
+  
+    this.udisable=true;
+
+    this.sdisable=false;
   }
 
-  usrObj:UserInfo=new UserInfo();
-  sub(){
 
-    // this.registerArr.setData(this.usrObj);
+  shop(){
+
+    this.usrObj.isAdmin=true;
+    this.sdisable=true;
+    this.udisable=false;
+
+  }
+
+  submit(){
     
+   
+    this.registerArr.setData(this.usrObj);
     this.usrObj=new UserInfo();
 
+    console.log(this.usrObj.firstName);
+
+    console.log(this.registerArr.getData());
+
+    
+   
+
   }
+
+ 
+
+
+
+
+
 
 }

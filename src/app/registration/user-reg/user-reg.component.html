@@ -1,82 +1,49 @@
+<!-- <section class="container-fluid">
+  <h1 class="trial-h1"><b>Create Youtr Accoun</b></h1>
+  <div class="row">
+    <div class="col-sm-4">
+      <img src="./../../../assets/Untitled-design.png" class="trial-img" />
+    </div>
+    <div class="col-sm-8"></div>
+    
+    <div>
+      First Name: <br>
+      <input type="text"><br>
+      Last Name: <br>
+      <input type="text"><br>
+      
+    </div>
+  </div>
+</section> -->
+
 
 <section class="container-fluid">
-  <h1 class="trial-h1"><b>Create Your Account</b></h1>
+  <div id="trial">
+    <h2 class="trial-h1">Create Your Account</h2>
     <div class="row">
-<div class="col-sm-4">
-  <img src="./../../../assets/Untitled-design.png" class="trial-img">
-</div>
-<div class="col-sm-8">
-    <div style="display: flex; justify-content: center;" class="col-sm-3" class="form-group2">
-        <form class="needs-validation" novalidate >
-            <div class="form-row">
-              <div class="col-md-4 mb-3">
-                <label for="validationCustom01">First name</label>
-                <input type="text" id="validationCustom01" placeholder="First name" [(ngModel)]="usrObj.firstName" #f  required>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
-              </div>
-              <div class="col-md-4 mb-3">
-                <label for="validationCustom02">Last name</label>
-                <input type="text"  id="validationCustom02" placeholder="Last name" [(ngModel)]="usrObj.lastName" #l  required>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
-              </div>
-              <!-- <div > -->
-                <label for="validationCustomUsername">Username</label>
-                <div class="input-group" >
-                  <!-- <div class="input-group-prepend" > -->
-                    <span class="input-group-text" >@</span>
-                  <!-- </div> -->
-                  <input type="text" id="validationCustomUsername" placeholder="Username"  #u [(ngModel)]="usrObj.userName"  required>
-                  <div class="invalid-feedback">
-                    Please choose a username.
-                  </div>
-                </div>
-              </div>  
-            
-  
-            <div class="form-row">
-              <div class="col-md-6 mb-3">
-                <label for="validationCustom03">Password</label>
-                <input type="text"  id="validationCustom03" placeholder="Password" [(ngModel)]="usrObj.password" #p required>
-                <div class="invalid-feedback">
-                  Please provide a valid city.
-                </div>
-              </div>
-              <div class="col-md-3 mb-3">
-                <label for="validationCustom04">State</label>
-                <input type="text"  id="validationCustom04" placeholder="State" [(ngModel)]="usrObj.state" #s  required>
-                <div class="invalid-feedback">
-                  Please provide a valid state.
-                </div>
-              </div>
-              <div class="col-md-3 mb-3">
-                <label for="validationCustom05">Zip</label>
-                <input type="text"  id="validationCustom05" placeholder="Zip" [(ngModel)]="usrObj.zipcode" #z required>
-                <div class="invalid-feedback">
-                  Please provide a valid zip.
-                </div>
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                <label class="form-check-label" for="invalidCheck">
-                  Agree to terms and conditions
-                </label>
-                <div class="invalid-feedback">
-                  You must agree before submitting.
-                </div>
-              </div>
-            </div>
-            <button class="btn btn-primary" type="submit" (click)="submit(f.value,l.value,u.value,p.value,s.value,z.value)">Submit form</button>
-            <button (click)="sub()">Sub</button>
-          </form>
-    </div>
-</div>
-</div>
-   
+      <div class="col-sm-6">
+        <img src="./../../../assets/Untitled-design.png" class="trial-img">
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" name="" [(ngModel)]="usrObj.firstName">
+          <label>Last Name</label>
+          <input type="email" name="" [(ngModel)]="usrObj.lastName"> 
+          <label>E-mail</label>
+          <input type="email" name="" [(ngModel)]="usrObj.email">
+          <label>Username</label>
+          <input type="text" name="" [(ngModel)]="usrObj.userName">
+          <label>Password</label>
+          <input type="password" name="" [(ngModel)]="usrObj.password">
+          <div style="text-align: center; margin-top: 10px;">
+            <button (click)="customer()" [disabled]="udisable">Customer</button>
+            <button (click)="shop()" [disabled]="sdisable">Shop Owner</button>
 
+          </div>
+          <button type="button" class="btn form-btn"><a href="#" style="color: black; font-weight: bold; margin-bottom: 20px;" (click)="submit()">Submit</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>

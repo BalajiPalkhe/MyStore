@@ -12,10 +12,10 @@ export class RegisteredUserService {
     {
       firstName: 'a',
       lastName: 'a',
+      email:'a',
       userName: 'a',
       password: 'a',
-      state: 'a',
-      zipcode: 1234,
+      isAdmin:true
     },
   ];
 

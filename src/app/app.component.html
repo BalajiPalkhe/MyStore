@@ -8,10 +8,11 @@
     <app-login *ngIf="userReg==2"></app-login>
     
     <app-content *ngIf="userReg==3 || userReg==0" ></app-content>
+
+    <app-admin-dashboard *ngIf="userReg==5"></app-admin-dashboard>
+    
     
     <app-view-profile *ngIf="userReg==4"></app-view-profile>
     
 </div>
-<app-footer></app-footer>
-
-Testing comment
+<app-footer></app-footer> 
