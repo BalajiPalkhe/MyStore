@@ -36,10 +36,13 @@
         <form class="d-flex" role="search">
           
           
-          <button type="button" class="btn btn-primary" (click)="createAccount(1)" *ngIf="serv.whatToShow" class="btn-header">Create Account</button>
-          <button type="button" class="btn btn-primary" (click)="createAccount(2)" *ngIf="serv.whatToShow" Class="btn-header2 " >LogIn</button>
+          <!-- <button type="button" class="btn btn-primary" (click)="createAccount(1)" *ngIf="serv.whatToShow" class="btn-header">Create Account</button> -->
+
+          <button type="button" class="btn btn-success btn-sm" (click)="createAccount(1)" *ngIf="serv.whatToShow"  style="width: 70%; margin-right: 5px;" >Create Account</button>
+
+          <button type="button" class="btn btn-success btn-sm" (click)="createAccount(2)" *ngIf="serv.whatToShow"  >LogIn</button>
           <p style="width: 100%; margin-top: 11px;" *ngIf="app.userReg==3 && app.viewProfile==1">Welcome, {{serv.firstName}} {{serv.lastname}}</p>
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="margin-left: 10px;">
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
       </div>
