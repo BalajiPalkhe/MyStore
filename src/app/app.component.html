@@ -1,5 +1,5 @@
 
-<app-header></app-header>
+<app-header *ngIf="userReg!=5"></app-header>
 
 <div class="content">
 
@@ -15,4 +15,4 @@
     <app-view-profile *ngIf="userReg==4"></app-view-profile>
     
 </div>
-<app-footer></app-footer> 
+<app-footer *ngIf="userReg!=5"></app-footer> 
