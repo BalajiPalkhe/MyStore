@@ -11,6 +11,7 @@ import { HomepageModule } from './homepage/homepage.module';
 import { RegistrationModule } from './registration/registration.module';
 import { ProfileModule } from './profile/profile.module';
 import { AdminModule } from './admin/admin.module';
+import { RouterModule, RouterOutlet } from '@angular/router';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { AdminModule } from './admin/admin.module';
     HomepageModule,
     RegistrationModule,
     ProfileModule,
-    AdminModule
+    AdminModule,
+    RouterModule
    
   ],
   providers: [],

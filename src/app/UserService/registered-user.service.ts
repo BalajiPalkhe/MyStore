@@ -15,8 +15,16 @@ export class RegisteredUserService {
       email:'a',
       userName: 'a',
       password: 'a',
-      isAdmin:true
+      isAdmin:false
     },
+    {
+      firstName: 'b',
+      lastName: 'b',
+      email:'b',
+      userName: 'b',
+      password: 'b',
+      isAdmin:true
+    }
   ];
 
   public setData(user:UserInfo)

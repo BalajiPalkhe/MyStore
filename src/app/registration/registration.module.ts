@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { ChangePasswordComponent } from './login/change-password/change-password.component';
 import { ForgetPasswordComponent } from './login/forget-password/forget-password.component';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -21,7 +22,8 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   exports:[
 

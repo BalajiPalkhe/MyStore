@@ -2,7 +2,7 @@
     <div class="container-fluid">
       <!-- <a class="navbar-brand" href="#">MyStore</a> -->
 
-      <a ><img src="./../../../assets/fbbe466b9024f642910404ead3f5e4a5 (1).png" class="logo"   alt="logo" style="width:135px;height:42px;" (click)=" logoutVal()"></a>
+      <a ><img src="./../../../assets/fbbe466b9024f642910404ead3f5e4a5 (1).png" class="logo"   alt="logo" style="width:135px;height:42px;"  [routerLink]="[serv.home]"></a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -10,7 +10,7 @@
       <div class="collapse navbar-collapse" id="navbarScroll">
         <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#" (click)="homeClick()">Home</a>
+            <a class="nav-link active" aria-current="page" [routerLink]="[serv.home]" (click)="homeClick()">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Orders</a>
@@ -25,11 +25,11 @@
               My Profile
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" (click)="createAccount(4)">View Profile</a></li>
-              <li *ngIf="serv.editProfileval"><a class="dropdown-item" href="#">Edit Profile</a></li>
+              <li><a class="dropdown-item" (click)="createAccount(4)" routerLink="login/view-profile" >View Profile</a></li>
+              <li *ngIf="serv.editProfileval"><a class="dropdown-item" >Edit Profile</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#" *ngIf="serv.logoutVal==true"(click)="logInNavbar()">Log In</a></li>
-              <li><a class="dropdown-item" href="#"*ngIf="serv.logoutVal==false" (click)="logoutVal()">Logout</a></li>
+              <li><a class="dropdown-item"   *ngIf="serv.logoutVal==true" [routerLink]="[serv.home]" >Log In</a></li>
+              <li><a class="dropdown-item" *ngIf="serv.logoutVal==false" (click)="logoutVal()">Logout</a></li>
             </ul>
           </li>
         </ul>
@@ -38,10 +38,10 @@
           
           <!-- <button type="button" class="btn btn-primary" (click)="createAccount(1)" *ngIf="serv.whatToShow" class="btn-header">Create Account</button> -->
 
-          <button type="button" class="btn btn-success btn-sm" (click)="createAccount(1)" *ngIf="serv.whatToShow"  style="width: 70%; margin-right: 5px;" >Create Account</button>
+          <button type="button" class="btn btn-success btn-sm" (click)="createAccount(1)" *ngIf="serv.whatToShow"  style="width: 70%; margin-right: 5px;" routerLink="user-reg" >Create Account</button>
 
-          <button type="button" class="btn btn-success btn-sm" (click)="createAccount(2)" *ngIf="serv.whatToShow"  >LogIn</button>
-          <p style="width: 100%; margin-top: 11px;" *ngIf="app.userReg==3 && app.viewProfile==1">Welcome, {{serv.firstName}} {{serv.lastname}}</p>
+          <button type="button" class="btn btn-success btn-sm" (click)="createAccount(2)" *ngIf="serv.whatToShow" routerLink="login" >LogIn</button>
+          <p style="width: 100%; margin-top: 11px;" *ngIf="serv.loggeedin">Welcome, {{serv.firstName}} {{serv.lastname}}</p>
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="margin-left: 10px;">
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>

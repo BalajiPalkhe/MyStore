@@ -47,6 +47,9 @@ export class UserRegComponent {
 
     console.log(this.registerArr.getData());
 
+    this.udisable=false;
+    this.sdisable=false;
+
     
    
 

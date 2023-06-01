@@ -13,6 +13,10 @@ export class HeaderComponent {
   constructor(public app:AppComponent,public serv:LoginService){
 
   }
+
+  
+
+  
   createAccount(val:any){
     this.app.userReg=val;
   }
@@ -25,6 +29,8 @@ export class HeaderComponent {
     this.serv.editProfileval=false;
     this.app.userReg=0;
     this.app.viewProfile=0;
+    this.serv.loggeedin=false;
+    
   }
   logInNavbar()
   {

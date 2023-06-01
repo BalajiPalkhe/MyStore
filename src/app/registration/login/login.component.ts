@@ -1,4 +1,5 @@
 import { Component, Input, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { RegisteredUserService } from 'src/app/UserService/registered-user.service';
 import { AppComponent } from 'src/app/app.component';
 import { HeaderComponent } from 'src/app/homepage/header/header.component';
@@ -11,7 +12,7 @@ import { LoginService } from 'src/app/login.service';
 })
 export class LoginComponent {
 
-  constructor(public serv:LoginService,private regisered:RegisteredUserService, private appCom:AppComponent ){
+  constructor(public serv:LoginService,private regisered:RegisteredUserService, private appCom:AppComponent, private router:Router){
     
     
     }
@@ -25,12 +26,12 @@ export class LoginComponent {
         let temp=UserArr[i];
         if(mail==temp.userName && pass==temp.password)
         {
-
-
           if(temp.isAdmin)
           {
+            this.serv.loggeedin=true;
 
-            this.appCom.userReg=5;
+            this.router.navigate(['dashboard']);
+            
           }
           else{
 
@@ -43,8 +44,15 @@ export class LoginComponent {
             this.serv.lastname=temp.lastName;
             this.serv.matchedUserIndex=i;
             this.appCom.viewProfile=1;
+            this.serv.loggeedin=true;
+            // this.router.navigate(['/content']);
+            this.serv.home="login/content";
+            
+
 
           }
+          break;
+          
         }
         else
         {
