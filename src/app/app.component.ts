@@ -11,6 +11,7 @@ export class AppComponent {
 
   viewProfile=0;
   
+  headfoot=true;
 
   
 }

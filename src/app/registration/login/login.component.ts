@@ -29,6 +29,7 @@ export class LoginComponent {
           if(temp.isAdmin)
           {
             this.serv.loggeedin=true;
+            this.appCom.headfoot=false;
 
             this.router.navigate(['dashboard']);
             
@@ -47,9 +48,6 @@ export class LoginComponent {
             this.serv.loggeedin=true;
             // this.router.navigate(['/content']);
             this.serv.home="login/content";
-            
-
-
           }
           break;
           
@@ -59,13 +57,5 @@ export class LoginComponent {
           this.test=2;
         }
      }
-
-
-    
-
   }
-
-
-
-
 }
