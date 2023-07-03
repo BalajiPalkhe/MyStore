@@ -12,6 +12,7 @@ import { RegistrationModule } from './registration/registration.module';
 import { ProfileModule } from './profile/profile.module';
 import { AdminModule } from './admin/admin.module';
 import { RouterModule, RouterOutlet } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { RouterModule, RouterOutlet } from '@angular/router';
     RegistrationModule,
     ProfileModule,
     AdminModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
    
   ],
   providers: [],

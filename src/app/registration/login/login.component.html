@@ -1,21 +1,39 @@
-<p>login works!</p>
 
-
-
-
-<div>
-    <div>
-        <div>
-
+<!-- <div style="text-align: center;">
+    <div style="background-image: url(./../../../assets/Untitled.png); height: 400px;">
+        <div >
             Email: <br>
             <input type="text" #mail><br>
             Password: <br>
             <input type="text" #pass><br>
             <button (click)="log(mail.value,pass.value)" routerLink="content">Login</button>
             <h6 style="color: red;" *ngIf="test==2">Please enter valid username and password.</h6>
-
         </div>
-
     </div>
+</div> -->
 
-</div>
+
+<div class="container" id="container">
+		<div class="form-container log-in-container">
+			<form action="#">
+				<h1>Login</h1>
+				<div class="social-container">
+					<a href="" class="social"><i class="fa fa-facebook fa-2x"><img src="./../../../assets/icons8-instagram-48.png" alt=""></i></a>
+					<a href="" class="social"><i class="fab fa fa-twitter fa-2x"><img src="./../../../assets/icons8-twitter-48.png" alt=""></i></a>
+				</div>
+			
+				<input type="email" placeholder="Email" #mail />
+				<input type="password" placeholder="Password" #pass />
+				<a href="#">Forgot your password?</a>
+				<button (click)="log(mail.value,pass.value)" routerLink="content">Log In</button>
+			</form>
+		</div>
+		<div class="overlay-container">
+			<div class="overlay">
+				<div class="overlay-panel overlay-right">
+					<h1>HTML CSS Login Form</h1>
+					<p>This login form is created using pure HTML and CSS. For social icons, FontAwesome is used.</p>
+				</div>
+			</div>
+		</div>
+	</div>

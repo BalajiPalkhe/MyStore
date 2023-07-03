@@ -29,7 +29,7 @@
               <li *ngIf="serv.editProfileval"><a class="dropdown-item" >Edit Profile</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item"   *ngIf="serv.logoutVal==true" [routerLink]="[serv.home]" >Log In</a></li>
-              <li><a class="dropdown-item" *ngIf="serv.logoutVal==false" (click)="logoutVal()">Logout</a></li>
+              <li><a class="dropdown-item" *ngIf="serv.logoutVal==false" (click)="logoutVal()" [routerLink]="[serv.home]">Logout</a></li>
             </ul>
           </li>
         </ul>

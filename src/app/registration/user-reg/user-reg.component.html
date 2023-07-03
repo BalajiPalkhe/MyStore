@@ -27,20 +27,32 @@
       <div class="col-sm-6">
         <div class="form-group">
           <label>First Name</label>
-          <input type="text" name="" [(ngModel)]="usrObj.firstName">
+          <input type="text" name="" [(ngModel)]=" reg.first_name " >
           <label>Last Name</label>
-          <input type="email" name="" [(ngModel)]="usrObj.lastName"> 
+          <input type="email" name="" [(ngModel)]=" reg.last_name ">
           <label>E-mail</label>
-          <input type="email" name="" [(ngModel)]="usrObj.email">
+          <input type="email" name=""  [(ngModel)]="reg.email">
           <label>Username</label>
-          <input type="text" name="" [(ngModel)]="usrObj.userName">
+          <input type="text" name="" [(ngModel)]="reg.username">
           <label>Password</label>
-          <input type="password" name="" [(ngModel)]="usrObj.password">
-          <div style="text-align: center; margin-top: 10px;">
-            <button (click)="customer()" [disabled]="udisable">Customer</button>
-            <button (click)="shop()" [disabled]="sdisable">Shop Owner</button>
+          <input type="password" name="" [(ngModel)]="reg.password">
+
+          <div>
+            <label>Choose User Type:</label>
+            <select (change)="select($event)">
+              <option>Select User Type</option>
+              <option>
+                Shop Owner
+              </option>
+              <option>
+                Customer
+              </option>
+            </select>
+            <br />
+            <br />
           </div>
-          <button type="button" class="btn form-btn"><a style="color: black; font-weight: bold; margin-bottom: 20px;" (click)="submit()">Submit</a></button>
+          <button type="button" class="btn form-btn"><a style="color: black; font-weight: bold; margin-bottom: 20px;"
+              (click)="submit()">Submit</a></button>
         </div>
       </div>
     </div>

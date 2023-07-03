@@ -9,32 +9,54 @@
       <div style="text-align: center;">
         <div>
           <div>
+            Customer Id :
+            <span >{{ loggedUserInfo.customerId }}</span
+            ><br />
+          </div>
+          <div>
             First_Name :
-            <span >{{ reg.regUser[userCom.matchedUserIndex].firstName }}</span
+            <span >{{ loggedUserInfo.firstName }}</span
             ><br />
           </div>
           <br />
           <div>
             Last_Name :
-            <span>{{ reg.regUser[userCom.matchedUserIndex].lastName }}</span
+            <span>{{ loggedUserInfo.lastName }}</span
             ><br />
           </div>
           <br />
           <div>
             User_Name :
-            <span>{{ reg.regUser[userCom.matchedUserIndex].userName }}</span
+            <span>{{ loggedUserInfo.username }}</span
+            ><br />
+          </div>
+          <br/>
+          <div>
+            Gender :
+            <span>{{ loggedUserInfo.gender }}</span
             ><br />
           </div>
           <br />
-         
           <div>
-            Email : <span>{{ reg.regUser[userCom.matchedUserIndex].email }} </span
+            Email : <span>{{ loggedUserInfo.email }} </span
             ><br />
           </div>
          
           <br />
         </div>
       </div>
-    </div>
+    </div>
   </div>
+
+
+  <div style="display: flex;">
+    <div style="width: 30%; background-color: aqua;">
+
+      hi
+    </div>
+    <div style="width: 60%; background-color: burlywood;">
+hello
+    </div>
+  </div>
+
 
